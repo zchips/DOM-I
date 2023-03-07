@@ -48,13 +48,13 @@ const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = siteContent.images['cta-img']
 
 const midImg = document.querySelector('#middle-img')
-midImg.setAttribute('src', siteContent.images['middle-img'])
+midImg.setAttribute('src', 'http://localhost:9000/img/accent.png', siteContent.images['middle-img'])
 
 const footerLink = document.querySelector('footer a')
 footerLink.textContent = siteContent.footer.copyright
 
 const contact = document.querySelector('section.contact')
-contact.children[0].textContent = siteContent.contact['wcontact-h4']
+contact.children[0].textContent = siteContent.contact['contact-h4']
 
 contact.children[1].textContent = siteContent.contact['address']
 contact.querySelector('p:nth-of-type(2').textContent = siteContent.contact['phone']
@@ -81,7 +81,7 @@ pBottom[2].textContent = siteContent['main-content']['vision-content']
 
 document.querySelectorAll('.cta .cta-text h1').textContent = siteContent.cta.h1
 document.querySelectorAll('.cta cta-text button').textContent = siteContent.cta.button
-
+// document.querySelectorAll('.footer a.bold').textContent = siteContent.footer.a
 
 const navLinks = document.querySelectorAll('header nav a')
 const navLinkTexts = Object.values(siteContent.nav)
