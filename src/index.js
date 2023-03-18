@@ -52,12 +52,14 @@ midImg.setAttribute('src', 'http://localhost:9000/img/accent.png', siteContent.i
 
 const footerLink = document.querySelector('footer a')
 footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
 
 const contact = document.querySelector('section.contact')
-contact.children[0].textContent = siteContent.contact['contact-h4']
+// contact.children[0].textContent = siteContent.contact['contact-h4']
 
+contact.querySelector('h4').textContent = siteContent.contact['contact-h4']
 contact.children[1].textContent = siteContent.contact['address']
-contact.querySelector('p:nth-of-type(2').textContent = siteContent.contact['phone']
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent.contact['phone']
 contact.children[3].textContent = siteContent.contact['email']
 
 
@@ -79,9 +81,9 @@ pBottom[1].textContent = siteContent['main-content']['product-content']
 pBottom[2].textContent = siteContent['main-content']['vision-content']
 
 
-document.querySelectorAll('.cta .cta-text h1').textContent = siteContent.cta.h1
-document.querySelectorAll('.cta cta-text button').textContent = siteContent.cta.button
-// document.querySelectorAll('.footer a.bold').textContent = siteContent.footer.a
+document.querySelector('.cta h1').textContent = siteContent.cta.h1
+document.querySelector('.cta button').textContent = siteContent.cta.button
+// document.querySelectorAll('footer a.bold').textContent = siteContent.footer.a
 
 const navLinks = document.querySelectorAll('header nav a')
 const navLinkTexts = Object.values(siteContent.nav)
